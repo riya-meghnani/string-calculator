@@ -3,7 +3,7 @@ export function add(numbers) {
       return 0;
     }
     else {
-        let no = numbers.split(",")
+        let no = numbers.split(/[\n,]+/);
         if(no.length == 1){
             return 1
         }

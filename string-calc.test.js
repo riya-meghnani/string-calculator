@@ -11,3 +11,7 @@ test("single number returns the number itself", () => {
 test("comma separated value should return sum", () => {
     expect(add("1,2,3")).toBe(6);
 });
+
+test("both comma and next line separated value should return sum", () => {
+    expect(add("1\n2,3")).toBe(6);
+});
