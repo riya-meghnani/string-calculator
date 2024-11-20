@@ -19,3 +19,7 @@ test("both comma and next line separated value should return sum", () => {
 test("handle initial delimiter", () => {
     expect(add("//;\n1;2")).toBe(3);
 });
+
+test ("negative no. not allowed", ()=> {
+    expect(add("-1,-2,3")).toThrowError("negative no not allowed");
+})
