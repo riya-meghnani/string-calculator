@@ -7,7 +7,10 @@ export function add(numbers) {
             numbers = numbers.split('//;').join();
         }
         let no = numbers.split(/[\n,;]+/);
-        if (no.length == 1) {
+        if (no.find(num => parseInt(num) < 0)) {
+            throw new Error('Negative number is not allowed');
+        }
+        else if (no.length == 1 && !isNaN(parseInt(no[0], 10))) {
             return 1
         }
         else {

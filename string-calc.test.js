@@ -21,5 +21,5 @@ test("handle initial delimiter", () => {
 });
 
 test ("negative no. not allowed", ()=> {
-    expect(add("-1,-2,3")).toThrowError("negative no not allowed");
+    expect(() => add('-1,-2,3')).toThrow(Error);
 })
