@@ -15,3 +15,7 @@ test("comma separated value should return sum", () => {
 test("both comma and next line separated value should return sum", () => {
     expect(add("1\n2,3")).toBe(6);
 });
+
+test("handle initial delimiter", () => {
+    expect(add("//;\n1;2")).toBe(3);
+});
